@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+	<title>controllers scope</title>
+</head>
+<body ng-app>
+
+	<input type="text" ng-model="query"/>
+	<select ng-model="order">
+		<option value="username">Organiser par nom</option>
+		<option value="content">Organiser par contenu</option>
+	</select>
+
+	<div ng-init="comments=[{username:'Marc', content:'hello'}, {username:'Jean', content:'hello too'}, {username:'John', content:'hello three'}]">
+		
+		<div ng-repeat="comment in comments | filter:{content:query} | orderBy:order">
+			<p> 
+				<strong>{{comment.username}}</strong><br>
+				{{comment.content}}
+			</p>
+			<!-- {{user | uppercase}} -->
+		</div>
+		
+
+
+		<!--{{users  | filter:'M'}}-->
+
+
+
+	</div>
+
+
+	
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular.min.js"></script>
+
+	<script>
+
+	function CommentsCtrl($scope){
+
+
+
+		$scope.comments = 
+
+		[
+		{
+			"username": "function (a){\n\"use strict\";\nreturn e.gender=a||(this.bool()?\"male\":\"female\"),e.name=c.getItem(e.gender+\"FirstNames\"),e.name}",
+			"city": "function (){\n\"use strict\";\nreturn c.getItem(\"cities\")}",
+			"email": "function (a){\n\"use strict\";\nvar b=e.name||this.firstName(),c=e.surname||this.surname(),d=e.company||this.company();return a&&(b=this.firstName(),c=this.surname(),d=this.company()),(b+c+\"@\"+d+\".com\").toLowerCase()}",
+			"content": "Ad excepteur adipisicing deserunt sunt dolor nulla reprehenderit cillum adipisicing. Nostrud sit Lorem dolore ipsum do labore ut in. Elit sint in deserunt officia ullamco anim proident tempor nulla laboris ad pariatur aliqua. Nulla magna dolore adipisicing laboris deserunt enim proident cillum ut fugiat. Nisi reprehenderit ut sit id incididunt consequat laborum fugiat est ea qui aliquip."
+		},
+		{
+			"username": "function (a){\n\"use strict\";\nreturn e.gender=a||(this.bool()?\"male\":\"female\"),e.name=c.getItem(e.gender+\"FirstNames\"),e.name}",
+			"city": "function (){\n\"use strict\";\nreturn c.getItem(\"cities\")}",
+			"email": "function (a){\n\"use strict\";\nvar b=e.name||this.firstName(),c=e.surname||this.surname(),d=e.company||this.company();return a&&(b=this.firstName(),c=this.surname(),d=this.company()),(b+c+\"@\"+d+\".com\").toLowerCase()}",
+			"content": "Dolore sit aliquip ad nulla laboris quis duis reprehenderit irure laborum in in deserunt voluptate. Deserunt tempor proident do elit. Aliquip laborum est reprehenderit exercitation dolor excepteur esse. Ex proident reprehenderit qui ex excepteur sunt velit. Adipisicing aliquip officia consequat magna nisi nostrud pariatur qui."
+		},
+		{
+			"username": "function (a){\n\"use strict\";\nreturn e.gender=a||(this.bool()?\"male\":\"female\"),e.name=c.getItem(e.gender+\"FirstNames\"),e.name}",
+			"city": "function (){\n\"use strict\";\nreturn c.getItem(\"cities\")}",
+			"email": "function (a){\n\"use strict\";\nvar b=e.name||this.firstName(),c=e.surname||this.surname(),d=e.company||this.company();return a&&(b=this.firstName(),c=this.surname(),d=this.company()),(b+c+\"@\"+d+\".com\").toLowerCase()}",
+			"content": "Voluptate eiusmod in dolor esse ea officia aliqua proident commodo exercitation deserunt officia veniam. Labore aliquip incididunt do ut non eiusmod laboris aute officia anim. Proident nulla aliquip in consequat proident deserunt cillum reprehenderit do. Pariatur nostrud amet pariatur cupidatat voluptate id ex consequat aute. Sint irure nisi esse non ad reprehenderit nisi."
+		},
+		{
+			"username": "function (a){\n\"use strict\";\nreturn e.gender=a||(this.bool()?\"male\":\"female\"),e.name=c.getItem(e.gender+\"FirstNames\"),e.name}",
+			"city": "function (){\n\"use strict\";\nreturn c.getItem(\"cities\")}",
+			"email": "function (a){\n\"use strict\";\nvar b=e.name||this.firstName(),c=e.surname||this.surname(),d=e.company||this.company();return a&&(b=this.firstName(),c=this.surname(),d=this.company()),(b+c+\"@\"+d+\".com\").toLowerCase()}",
+			"content": "Pariatur magna consectetur enim ex quis magna mollit sunt id incididunt tempor. Quis deserunt anim magna consequat id labore anim dolor Lorem commodo. Culpa culpa ea consectetur occaecat et. Aute irure laboris ex sit veniam. Cupidatat laborum officia exercitation labore ullamco laborum ad enim et ad excepteur sunt mollit."
+		},
+		{
+			"username": "function (a){\n\"use strict\";\nreturn e.gender=a||(this.bool()?\"male\":\"female\"),e.name=c.getItem(e.gender+\"FirstNames\"),e.name}",
+			"city": "function (){\n\"use strict\";\nreturn c.getItem(\"cities\")}",
+			"email": "function (a){\n\"use strict\";\nvar b=e.name||this.firstName(),c=e.surname||this.surname(),d=e.company||this.company();return a&&(b=this.firstName(),c=this.surname(),d=this.company()),(b+c+\"@\"+d+\".com\").toLowerCase()}",
+			"content": "Tempor irure consectetur officia occaecat sint consequat minim ea proident. Dolore veniam dolore officia aliqua ullamco Lorem. Fugiat cillum consectetur cupidatat pariatur ullamco quis mollit occaecat. Nisi excepteur elit consequat incididunt minim consequat magna deserunt occaecat aliqua dolore. Culpa consequat voluptate ea exercitation anim aliqua quis excepteur consequat elit aliquip nostrud."
+		}
+		]
+
+
+
+
+
+	}
+
+
+	</script>
+
+
+
+</body>
+</html>
